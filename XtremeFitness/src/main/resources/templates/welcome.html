@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Fitness & Health</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Mukta|Heebo" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-heartbeat fa-2x fa-nav"></i>Fitness & Health</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="/welcome" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/admin" class="nav-link">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+    <section class="hero-wrap js-fullheight">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start">
+                <div class="col-md-8 mx-auto ftco-animate">
+                    <h1 class="typewrite mb-3" data-period="4000" data-type='[ "Make fitness a habit.", "Every workout counts."]'>
+                        <span class="wrap"></span>
+                    </h1>
+                    <h2 class="mb-5">Make the most of your workout</h2>
+                    <a th:href="@{/enroll}" class="btn btn-primary p-3 px-4">Create account</a>
+                    <a href="/login" class="btn btn-primary p-3 px-4">Sign in</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-intro">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-md-8 mx-auto">
+                    <div class="heading-section ftco-animate">
+                        <h2 class="mb-4">Why You Should <span class="word">Go</span> To The <span class="word">Gym</span></h2>
+                    </div>
+                    <ul class="mt-5 do-list">
+                        <li class="ftco-animate"><span class=""></span>YOUR BODY WILL THANK YOU IN THE LONG RUN.</li>
+                        <li class="ftco-animate"><span class=""></span>IT WILL IMPROVE YOUR RELATIONSHIPS.</li>
+                        <li class="ftco-animate"><span class=""></span>YOU’LL FEEL BETTER.</li>
+                        <li class="ftco-animate"><span class=""></span>IT WILL IMPROVE YOUR SLEEP.</li>
+                        <li class="ftco-animate"><span class=""></span>YOU'LL BE LESS STRESSED</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="change-life">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto ftco-animate">
+                    <div class="change">
+                        We can help you change your life, eat healthy and do sports.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-section-services bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="devices">
+                        We have a host of devices to make your life easier
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fas fa-fire fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Calories Tracker</h3>
+                            <p>This device can help you calculate your accumulated calories. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fas fa-running fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Run Tracker</h3>
+                            <p>This device can help you calculate your distance. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fas fa-weight fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Weight Tracker</h3>
+                            <p>This device can help you calculate your body weight. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="far fa-heart fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Tension tracker</h3>
+                            <p>This device can help you calculate your blood pressure. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h2 class="mb-1">Our doctors are your friends</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/doctor-1.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Popescu Adrian</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/doctor-2.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Serbanescu Ioana</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/doctor-3.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Hora Andreea</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/doctor-4.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Ionescu Paul</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-section-services bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="devices">
+                        We have a host of devices to make your life easier
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fas fa-fire fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Calories Tracker</h3>
+                            <p>This device can help you calculate your accumulated calories. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fas fa-running fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Run Tracker</h3>
+                            <p>This device can help you calculate your distance. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="fas fa-weight fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Weight Tracker</h3>
+                            <p>This device can help you calculate your body weight. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="services ftco-animate">
+                        <div class="icon d-flex justify-content-center align-items-center">
+                            <i class="far fa-heart fa-class"></i>
+                        </div>
+                        <div class="text mt-4">
+                            <h3>Tension tracker</h3>
+                            <p>This device can help you calculate your blood pressure. Is very easy to use and can help.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <h2 class="mb-1">We have a lot of experienced coaches</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/trainer1.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Ronnie Coleman</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/trainer2.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Pavel Antonia</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/trainer3.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Logan McGregor</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-flex">
+                    <div class="coach align-items-stretch">
+                        <div class="img" style="background-image: url(images/trainer4.png);"></div>
+                        <div class="text bg-white p-4 ftco-animate">
+                            <h3>Alex & Alexandra Manea</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="ftr">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6ftco-animate footer-align">
+                    <div class="ftco-footer-widget mb-4">
+                        <div class="ftr-logo more-text-size">Fitness & Health</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="ftco-footer-widget mb-4 ftr-logo">
+                        <ul class="ftco-footer-social list-unstyled footer-align">
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>
+                            document.write(new Date().getFullYear());
+
+                        </script> All rights reserved | Fitness & Health
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var text = document.getElementById('text');
+        var newDom = '';
+        var animationDelay = 6;
+
+        for (let i = 0; i < text.innerText.length; i++) {
+            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i]) + '</span>';
+        }
+
+        text.innerHTML = newDom;
+        var length = text.children.length;
+
+        for (let i = 0; i < length; i++) {
+            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+        }
+
+    </script>
+
+</body>
+
+</html>

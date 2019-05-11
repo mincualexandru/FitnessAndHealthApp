@@ -1,0 +1,142 @@
+.display-center {
+    margin-top: 100px;
+}
+
+.logo-user {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.user-name {
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.user-name-subtitle {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    margin-top: -20px;
+    font-family: 'Work Sans', sans-serif;
+    font-style: oblique;
+}
+
+.account {
+    text-align: left;
+    font-size: 23px;
+    color: white;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.edit-account {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.devices {
+    text-align: left;
+    font-size: 23px;
+    color: white;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.view-devices {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.display {
+    display: inline;
+}
+
+.more-bottom {
+    margin-top: 40px;
+}
+
+.align {
+    text-align: center;
+}
+
+.link-option {
+    color: #ff6666;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.link-option:hover {
+    color: #ff6666;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: 'Cabin Condensed', sans-serif;
+    text-decoration: underline;
+}
+
+.fa-col {
+    color: white;
+}
+
+.block {
+    display: block;
+}
+
+.box-form {
+    border: 2px solid white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    box-shadow: 18px 9px 52px 35px rgba(0, 0, 0, 0.32);
+    padding: 20px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ff9068, #fd746c);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+ul#menu li {
+    display: inline;
+    text-align: center;
+}
+
+.option-link {
+    font-size: 23px;
+    color: white;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+
+.details-box {
+    border: 3px solid white;
+    padding: 20px;
+}
+
+.devices-box {
+    border: 3px solid white;
+    padding: 20px;
+}
+
+.measurements-box {
+    border: 3px solid white;
+    padding: 20px;
+}

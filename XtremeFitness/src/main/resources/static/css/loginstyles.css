@@ -1,0 +1,223 @@
+html,
+body {
+    height: 100%;
+}
+
+.bg-color {
+    background: #DE6262;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFB88C, #DE6262);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.display-in-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-login {
+    height: 130px;
+    width: 130px;
+    background-color: white;
+    margin: 0 auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    color: #ff6666;
+}
+
+.logo-icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-title {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Bitter', serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.login-subtitle {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Bitter', serif;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: white;
+    text-align: center;
+    font-family: 'Bitter', serif;
+    font-size: 15px;
+    font-family: 'Bitter', serif;
+}
+
+.submit-btn {
+    background-color: white;
+    color: #ff6666;
+    font-size: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: 'Bitter', serif;
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+}
+
+.down-section-form {
+    text-align: center;
+}
+
+.links {
+    color: white !important;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.links:hover {
+    color: white !important;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    text-decoration: underline;
+}
+
+.create-account {}
+
+.forgot-password {}
+
+.box-form {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.input-form {
+    background-color: rgb(255, 255, 255, 0.1);
+    border: none;
+}
+
+.input-form:focus {
+    border: none;
+    background-color: white;
+    opacity: 0.1;
+    outline: none;
+}
+
+.input-icon {
+    color: white;
+}
+
+.corner-left {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.corner-right {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.change::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
+
+.change:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+    opacity: 1;
+    font-family: 'Overpass', sans-serif;
+}
+
+.change::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    opacity: 1;
+    font-family: 'Overpass', sans-serif;
+}
+
+.change:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
+
+.remember-me {
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    font-size: 17px;
+}
+
+.align-login {
+    margin-top: 100px;
+}
+
+.bottom {
+    margin-bottom: 100px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform .2s;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+img:hover {
+    transform: scale(1.1);
+    filter: brightness(50%);
+}
+
+.title-description {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ff6666;
+    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.description {
+    color: #ff6666;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.box-stl {
+    box-shadow: 18px 9px 52px 35px rgba(0, 0, 0, 0.32);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 50px;
+    background-color: white;
+}
+
+.reasons {
+    list-style-type: circle;
+    padding: 0px;
+}

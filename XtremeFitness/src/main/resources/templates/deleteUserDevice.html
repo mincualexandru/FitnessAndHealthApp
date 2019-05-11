@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Xtreme Fitness</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:700|Merriweather+Sans|Mukta|Raleway:700|Rosario:700|Karma:700|Oswald|Source Sans Pro" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/open-iconic-bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/animate.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/owl.carousel.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/owl.theme.default.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/magnific-popup.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/aos.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ionicons.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap-datepicker.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/jquery.timepicker.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/flaticon.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/icomoon.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-heartbeat fa-2x fa-nav"></i>Fitness & Health</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="/welcome" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="/userInfo?userDeviceId=0" class="nav-link">Account</a></li>
+                    <li class="nav-item"><a href="/admin" class="nav-link">Admin</a></li>
+                    <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+
+
+    <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_01.jpg');">
+        <div class="overlay" style="background: blue;"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-3 bread light-col">Delete device</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a class="light-col" href="/userInfo?userDeviceId=0">Account</a></span> <span class="light-col">Delete device</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <form th:action="@{/deleteUserDeviceSave}" method="get" enctype="multipart/form-data">
+        <section class="add-device">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 mx-auto ftco-animate box-devices padd">
+                        <div class="title-devices">
+                            Devices
+                        </div>
+                        <div class="subtitle-devices drop-bottom-2x">
+                            You are currently using the following devices
+                            <div class="row">
+                                <div class="col-md-8 mx-auto">
+                                    <ul class="list-of-devices">
+                                        <li class="hover-li" th:each="ud, iterStat : ${user.deviceUsers}">
+                                            <div th:text="${ud.device.deviceName}"></div>
+                                            <th:block th:if="${!iterStat.last}"></th:block>
+                                        </li>
+                                    </ul>
+                                    <div class="subtitle-devices">
+                                        If you want, you can delete a device
+                                    </div>
+                                    <div class="table-wrapper" style="margin-bottom: 50px;">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6 search-devices drag-bottom">
+                                                            <input type="text" class="placeholder-change " id="inputDevices" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <select class="" name="state" id="maxRowsDevices">
+                                                                    <option value="5000">Show ALL Rows</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="50">50</option>
+                                                                    <option value="70">70</option>
+                                                                    <option value="100">100</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-6 drag-bottom">
+                                                                    <div class='pagination-container'>
+                                                                        <nav>
+                                                                            <ul class="pagination"></ul>
+                                                                        </nav>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="fl-text-align">
+                                                                        <div class="fl-text"></div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table id="tableDevices" class=" table table-bordered table-striped fl-table display">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Select</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr th:each="ud, iterStat : ${user.deviceUsers}">
+                                                    <td><label th:text="${ud.device.deviceName}"></label></td>
+                                                    <td><input type="checkbox" name="deviceId" class="cbox" th:value="${ud.device.device_id}" /></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-primary edit-details px-4 drag-bottom full-width-btn" value="Delete device">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <footer class="ftr">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6ftco-animate footer-align">
+                    <div class="ftco-footer-widget mb-4">
+                        <div class="ftr-logo more-text-size">Fitness & Health</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="ftco-footer-widget mb-4 ftr-logo">
+                        <ul class="ftco-footer-social list-unstyled footer-align">
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>
+                            document.write(new Date().getFullYear());
+
+                        </script> All rights reserved | Fitness & Health
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(".cbox").on("click", function() {
+                var numberOfChecked = $('input.cbox:checkbox:checked').length;
+                if (numberOfChecked > 1) {
+                    $(this).prop('checked', false);
+                }
+            });
+
+        });
+    </script>
+    <script>
+        var table = '#tableDevices';
+        $('#maxRowsDevices').on('change', function() {
+            $('.pagination').html('');
+            var trnum = 0;
+            var maxRows = parseInt($(this).val());
+            var totalRows = $(table + ' tbody tr').length;
+            $(table + ' tr:gt(0)').each(function() {
+                trnum++;
+                if (trnum > maxRows) {
+                    $(this).hide();
+                }
+                if (trnum <= maxRows) {
+                    $(this).show();
+                }
+            });
+            if (totalRows > maxRows) {
+                var pagenum = Math.ceil(totalRows / maxRows);
+                for (var i = 1; i <= pagenum;) {
+                    $('.pagination').append('<li class="li-pag" data-page="' + i + '">\
+								      ' + i++ + '<span class="sr-only">(current)</span>\
+								    </li>').show();
+                }
+            }
+            $('.pagination li:first-child').addClass('active');
+            $('.pagination li').on('click', function() {
+                var pageNum = $(this).attr('data-page');
+                var trIndex = 0;
+                $('.pagination li').removeClass('active');
+                $(this).addClass('active');
+                $(table + ' tr:gt(0)').each(function() {
+                    trIndex++;
+                    if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
+                        $(this).hide();
+                    } else {
+                        $(this).show();
+                    }
+                });
+            });
+        });
+
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("inputDevices");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("tableDevices");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

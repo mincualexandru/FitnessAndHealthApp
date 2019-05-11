@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:700|Merriweather+Sans|Mukta|Raleway:700|Rosario:700|Karma:700" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- My-Styles -->
+    <link rel="stylesheet" type="text/css" href="/css/menustyle.css" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/menustyle.css}" />
+    <link rel="stylesheet" type="text/css" href="menustyle.css" />
+</head>
+
+<body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 no-padding">
+                    <nav class="navbar navbar-expand-lg bg-nav">
+                        <div class="navbar-brand">
+                            <div class="brand-icon">
+                                <i class="fas fa-dumbbell fa-2x fa-brand"></i>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link links" th:href="@{/}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link links" th:href="@{/userInfo}">My Account</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link links" th:href="@{/admin}">Admin</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link links" th:href="@{/login}">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link links" th:href="@{/logout}">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+</body></html>

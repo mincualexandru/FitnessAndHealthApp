@@ -1,0 +1,49 @@
+.no-padding {
+    padding: 0px;
+}
+
+.bg-nav {
+    background: #fd746c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9068, #fd746c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.brand-icon {
+    background-color: white;
+    color: #ff6666;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logout-btn {
+    background-color: white;
+    color: #ff6666;
+    font-size: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-family: 'Bitter', serif;
+    border: none;
+}
+
+.links {
+    color: white !important;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+.links:hover {
+    color: white !important;
+    font-size: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    text-decoration: underline;
+}

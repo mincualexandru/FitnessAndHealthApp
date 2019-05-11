@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Xtreme Fitness</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:700|Merriweather+Sans|Mukta|Raleway:700|Rosario:700|Karma:700|Oswald|Source Sans Pro" rel="stylesheet">
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/open-iconic-bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/animate.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/owl.carousel.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/owl.theme.default.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/magnific-popup.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/aos.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/ionicons.min.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap-datepicker.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/jquery.timepicker.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/flaticon.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/icomoon.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+    <script type="text/javascript" src="js/jquery.ja"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-heartbeat fa-2x fa-nav"></i>Fitness & Health</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="/welcome" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="/userInfo?userDeviceId=0" class="nav-link">Account</a></li>
+                    <li class="nav-item"><a href="/admin" class="nav-link">Admin</a></li>
+                    <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <section class="hero-wrap js-fullheight" style="background-image: url('images/account_bg.png');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <h1 class="mb-3 bread light-col">Your account</h1>
+                    <p class="breadcrumbs"><span class="mr-2"><a class="light-col" href="/welcome">Home</a></span> <span class="light-col">Account</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <form th:object="${user}">
+        <section class="account">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto ftco-animate">
+                        <div class="text-account">
+                            Your details account is here
+                        </div>
+                        <div class="container">
+                            <div class="row block-9">
+                                <div class="col-md-12 contact-info ftco-animate bg-light p-4">
+                                    <div class="row">
+                                        <div class="col-md-12 mb-4">
+                                            <h2 class="h4">Hi, <b class="username" th:text="${user.userName}"></b> !</h2>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <p><span>Real name:</span> <b class="detail-field" th:text="${user.name}"></b></p>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <p><span>Email:</span> <b class="detail-field" th:text="${user.email}"></b></p>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <p><span>Mobile:</span> <b class="detail-field" th:text="${user.mobile}"></b></p>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <p><span>Born Date:</span> <b class="detail-field" th:text="${user.born_date}"></b></p>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <p><span>Gender:</span> <b class="detail-field" th:text="${user.gender}"></b></p>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <a href="/editUserInfo" class="btn btn-primary edit-details px-4">Edit your details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="device">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 ftco-animate fadeInUp ftco-animated">
+                        <div class="container-fluid" style="margin-top:35px">
+                            <div class="row">
+                                <div class="col-md-10 mx-auto">
+                                    <div class="table-wrapper">
+                                        <div class="title-devices">
+                                            Devices
+                                        </div>
+                                        <div class="subtitle-devices">
+                                            You are currently using the following devices
+                                        </div>
+                                        <div class="add-device-btn">
+                                            <a th:href="@{/addDevice}" class="btn btn-primary edit-details px-4 drag-bottom">Add device</a>
+                                            <a th:href="@{/deleteUserDevice}" class="btn btn-primary edit-details px-4 drag-bottom">Delete device</a>
+                                        </div>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6 search-devices drag-bottom">
+                                                            <input type="text" class="placeholder-change " id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <select class="" name="state" id="maxRows">
+                                                                    <option value="5000">Show ALL Rows</option>
+                                                                    <option value="5">5</option>
+                                                                    <option value="10">10</option>
+                                                                    <option value="15">15</option>
+                                                                    <option value="20">20</option>
+                                                                    <option value="50">50</option>
+                                                                    <option value="70">70</option>
+                                                                    <option value="100">100</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-6 drag-bottom">
+                                                                    <div class='pagination-container'>
+                                                                        <nav>
+                                                                            <ul class="pagination"></ul>
+                                                                        </nav>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="fl-text-align">
+                                                                        <div class="fl-text"></div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <table id="mytable" class=" table table-bordered table-striped fl-table display">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Description</th>
+                                                    <th>Serial number</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="center" th:each="ud, iterStat : ${user.deviceUsers}">
+                                                    <td class="clickmeasurement" th:text="${ud.device.deviceName}"></td>
+                                                    <td th:text="${ud.device.deviceDescription}"></td>
+                                                    <td th:text="${ud.device.deviceSerialNumber}"></td>
+                                                    <td>
+                                                        <a th:href="@{'/editdeviceuser/' + ${ud.device.device_id}}"><i class="fas fa-user-edit"></i></a>
+                                                        <a th:href="@{'/enrollmeasurement/' + ${ud.device.device_id}}"><i class="fas fa-cart-plus"></i></a>
+                                                        <a th:href="@{'/userInfo?userDeviceId='+${ud.id}}"><i class="fas fa-plus"></i></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="measurement">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 ftco-animate fadeInUp ftco-animated">
+                        <div class="container-fluid" style="margin-top:35px">
+                            <div class="row">
+                                <div class="col-md-10 mx-auto">
+                                    <div class="table-wrapper">
+                                        <div class="title-devices">
+                                            Measurements
+                                        </div>
+                                        <div class="subtitle-devices">
+                                            Measurements of the device used
+                                        </div>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-6 search-devices">
+                                                            <input type="text" class="placeholder-change " id="inputTable" onkeyup="myFunctionn()" placeholder="Search for values.." title="Type in a name">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="fl-text-align">
+                                                                        <div class="fl-text"></div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="height:500px;overflow:auto;">
+                                            <table id="mytable2" class=" table table-bordered table-striped fl-table display">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Id</th>
+                                                        <th>Value</th>
+                                                        <th>Unit of measurement</th>
+                                                        <th>Date of measurement</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="center" th:each="measure, iterStat : ${measurementsUD}">
+                                                        <td th:text="${measure.id}"></td>
+                                                        <td th:text="${measure.value}"></td>
+                                                        <td th:text="${measure.unitOfMeasurement}"></td>
+                                                        <td th:text="${measure.dateOfMeasurement}"></td>
+                                                        <td>
+                                                            <a th:href="@{'/editmeasurement/' + ${measure.id}}"><i class="fas fa-user-edit"></i></a>
+                                                            <a th:href="@{'/deletemeasurement/' + ${measure.id}}"><i class="fas fa-trash"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+
+    <div id="container" style="height: 400px; min-width: 600px"></div>
+
+    <footer class="ftr">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6ftco-animate footer-align">
+                    <div class="ftco-footer-widget mb-4">
+                        <div class="ftr-logo more-text-size">Fitness & Health</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="ftco-footer-widget mb-4 ftr-logo">
+                        <ul class="ftco-footer-social list-unstyled footer-align">
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-twitter"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="ftr-logo icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;<script>
+                            document.write(new Date().getFullYear());
+
+                        </script> All rights reserved | Fitness & Health
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        var text = document.getElementById('text');
+        var newDom = '';
+        var animationDelay = 6;
+
+        for (let i = 0; i < text.innerText.length; i++) {
+            newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i]) + '</span>';
+        }
+
+        text.innerHTML = newDom;
+        var length = text.children.length;
+
+        for (let i = 0; i < length; i++) {
+            text.children[i].style['animation-delay'] = animationDelay * i + 'ms';
+        }
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            // number of records per page
+            var pageSize = 5;
+            // reset current page counter on load
+            $("#hdnActivePage").val(1);
+            // calculate number of pages
+            var numberOfPages = $('table tr').length / pageSize;
+            numberOfPages = numberOfPages.toFixed();
+            // action on 'next' click
+            $("a.next").on('click', function() {
+                // show only the necessary rows based upon activePage and Pagesize
+                $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) + pageSize) + ")").show();
+                $("table tr:nth-child(-n+" + $("#hdnActivePage").val() * pageSize + ")").hide();
+                var currentPage = Number($("#hdnActivePage").val());
+                // up<a href="https://www.jqueryscript.net/time-clock/">date</a> activepage
+                $("#hdnActivePage").val(Number($("#hdnActivePage").val()) + 1);
+                // check if previous page button is necessary (not on first page)
+                if ($("#hdnActivePage").val() != "1") {
+                    $("a.previous").show();
+                    $("span").show();
+                }
+                // check if next page button is necessary (not on last page)
+                if ($("#hdnActivePage").val() == numberOfPages) {
+                    $("a.next").hide();
+                    $("span").hide();
+                }
+            });
+            // action on 'previous' click
+            $("a.previous").on('click', function() {
+                var currentPage = Number($("#hdnActivePage").val());
+                $("#hdnActivePage").val(currentPage - 1);
+                // first hide all rows
+                $("table tr").hide();
+                // and only turn on visibility on necessary rows
+                $("table tr:nth-child(-n+" + ($("#hdnActivePage").val() * pageSize) + ")").show();
+                $("table tr:nth-child(-n+" + (($("#hdnActivePage").val() * pageSize) - pageSize) + ")").hide();
+                // check if previous button is necessary (not on first page)
+                if ($("#hdnActivePage").val() == "1") {
+                    $("a.previous").hide();
+                    $("span").hide();
+                }
+                // check if next button is necessary (not on last page)
+                if ($("#hdnActivePage").val() < numberOfPages) {
+                    $("a.next").show();
+                    $("span").show();
+                }
+                if ($("#hdnActivePage").val() == 1) {
+                    $("span").hide();
+                }
+            });
+        });
+
+    </script>
+    <script>
+        var table = '#mytable';
+        $('#maxRows').on('change', function() {
+            $('.pagination').html('');
+            var trnum = 0;
+            var maxRows = parseInt($(this).val());
+            var totalRows = $(table + ' tbody tr').length;
+            $(table + ' tr:gt(0)').each(function() {
+                trnum++;
+                if (trnum > maxRows) {
+                    $(this).hide();
+                }
+                if (trnum <= maxRows) {
+                    $(this).show();
+                }
+            });
+            if (totalRows > maxRows) {
+                var pagenum = Math.ceil(totalRows / maxRows);
+                for (var i = 1; i <= pagenum;) {
+                    $('.pagination').append('<li class="li-pag" data-page="' + i + '">\
+								      ' + i++ + '<span class="sr-only">(current)</span>\
+								    </li>').show();
+                }
+            }
+            $('.pagination li:first-child').addClass('active');
+            $('.pagination li').on('click', function() {
+                var pageNum = $(this).attr('data-page');
+                var trIndex = 0;
+                $('.pagination li').removeClass('active');
+                $(this).addClass('active');
+                $(table + ' tr:gt(0)').each(function() {
+                    trIndex++;
+                    if (trIndex > (maxRows * pageNum) || trIndex <= ((maxRows * pageNum) - maxRows)) {
+                        $(this).hide();
+                    } else {
+                        $(this).show();
+                    }
+                });
+            });
+        });
+
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("mytable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
+    <script>
+        function myFunctionn() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("inputTable");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("mytable2");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            // Create the chart
+            $('#container').highcharts('StockChart', {
+
+
+                rangeSelector: {
+                    selected: 1,
+                    inputEnabled: $('#container').width() > 480
+                },
+
+                title: {
+                    text: 'AAPL Stock Price'
+                },
+                
+                
+                xAxis: {
+                    type: 'datetime'
+                  },
+
+                series: [{
+                	name: 'Weight',
+                    data: [[${surveyMap.values()}]],
+                    marker: {
+                        enabled: true,
+                        radius: 3
+                    },
+                    shadow: true,
+                    tooltip: {
+                        valueDecimals: 2
+                    }
+                }]
+            });
+
+        });
+
+    </script>
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+</body>
+
+</html>
